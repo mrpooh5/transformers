@@ -545,7 +545,8 @@ class TnewsProcessor(DataProcessor):
         examples = []
         for (i, line) in enumerate(lines):
             guid = "%s-%s" % (set_type, i)
-
+            
+            print(line)
             json_ln = json.loads(line)
 
             text_a = json_ln['sentence'] + json_ln['keywords']
